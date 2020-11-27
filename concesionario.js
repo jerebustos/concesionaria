@@ -26,4 +26,12 @@ autosParaLaVenta: function () {
   
 },
 
+autos0KM: function () {
+    const autoCeroKM = this.autosParaLaVenta().filter( (auto) => {
+    return auto.km <= 100})
+      
+       return autoCeroKM;
+    
+  }
+
 }
