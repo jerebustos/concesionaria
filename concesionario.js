@@ -42,6 +42,24 @@ autos0KM: function () {
       }
     });
     return precios;
-  }
+  },
+  totalDeVentas: function () {
+    const sumatoria = this.listaDeVentas().reduce(function (acum, num) {
+      return acum + num;
+    }, 0);
+
+    return sumatoria;
+  },
+
+  puedeComprar: function (auto,persona) {
+    return (
+      (auto.precio / auto.cuotas) < persona.capacidadDePagoEnCuotas &&
+      auto.precio < persona.capacidadDePagoTotal
+    );
+  },
+  autosQuePuedeComprar(persona) {
+    autosQPuede = autos.filter((auto) => this.puedeComprar(auto, persona))
+   return autosQPuede
+}
 
 }
