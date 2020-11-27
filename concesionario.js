@@ -32,6 +32,16 @@ autos0KM: function () {
       
        return autoCeroKM;
     
+  },
+
+  listaDeVentas: function () {
+    const precios = [];
+    autos.forEach(function (auto) {
+      if (auto.vendido == true) {
+        return precios.push(auto.precio);
+      }
+    });
+    return precios;
   }
 
 }
