@@ -16,6 +16,14 @@ return null
       auto.vendido = true;
       
     
-  }
+  },
+
+autosParaLaVenta: function () {
+    const autoParaVender = autos.filter(function (auto) {
+      return auto.vendido == false;
+    });
+    return autoParaVender;
+  
+},
 
 }
