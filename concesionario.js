@@ -9,7 +9,13 @@ const concesionaria = {
      return auto}
 }
 return null
- }
+    },
 
+  venderAuto: function (patente) {
+    auto = this.buscarAuto(patente);  
+      auto.vendido = true;
+      
+    
+  }
 
 }
